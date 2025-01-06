@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>To-Do List</title>
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div class="input-container">
+            <input type="text" id="todoInput" placeholder="Add a new task...">
+            <button id="addButton">+</button>
+        </div>
+        
+        <div id="pendingCounter">Pending Tasks: 0</div>
+
+        <ul id="todoList"></ul>
+
+        <div class="toggle-container">
+            <label class="switch">
+                <input type="checkbox" id="toggleMode">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+
+    <script src="todo.js"></script>
+</body>
+</html>

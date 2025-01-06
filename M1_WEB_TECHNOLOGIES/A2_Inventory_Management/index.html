@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header class="header">
+      <h1>Expense Tracker</h1>
+    </header>
+
+    <!-- Add Expense Section -->
+    <section class="add-expense">
+      <h2>Add Expense</h2>
+      <form id="expense-form">
+        <input type="number" id="amount" placeholder="Amount" required>
+        <input type="text" id="description" placeholder="Description" required>
+        <select id="category" required>
+          <option value="" disabled selected>Select Category</option>
+          <option value="Food and Drink">Food and Drink</option>
+          <option value="Entertainment">Entertainment</option>
+          <option value="Travel">Travel</option>
+          <option value="Others">Others</option>
+        </select>
+        <button type="submit">Add</button>
+      </form>
+    </section>
+
+    <!-- Expense List Section -->
+    <section class="expense-list-section">
+      <h2>Expenses</h2>
+      <div id="expense-list" class="expense-list"></div>
+    </section>
+
+  <!-- JavaScript Files -->
+  <script src="app.js"></script>
+</body>
+</html>
