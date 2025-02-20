@@ -1,0 +1,106 @@
+Started by user Ramanachandran R S
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in C:\Users\raman\.jenkins\workspace\Assignment 4
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Clone)
+[Pipeline] git
+The recommended git tool is: NONE
+No credentials specified
+ > git.exe rev-parse --resolve-git-dir C:\Users\raman\.jenkins\workspace\Assignment 4\.git # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/ramanarsr/Test.git # timeout=10
+Fetching upstream changes from https://github.com/ramanarsr/Test.git
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.46.2.windows.1'
+ > git.exe fetch --tags --force --progress -- https://github.com/ramanarsr/Test.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+Checking out Revision f96a15305ce400d27c1708fa8d535259b203b25a (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f f96a15305ce400d27c1708fa8d535259b203b25a # timeout=10
+ > git.exe branch -a -v --no-abbrev # timeout=10
+ > git.exe branch -D master # timeout=10
+ > git.exe checkout -b master f96a15305ce400d27c1708fa8d535259b203b25a # timeout=10
+Commit message: "initial commit"
+ > git.exe rev-list --no-walk f96a15305ce400d27c1708fa8d535259b203b25a # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Install Dependencies)
+[Pipeline] bat
+
+C:\Users\raman\.jenkins\workspace\Assignment 4>npm install 
+
+up to date, audited 1343 packages in 3s
+
+268 packages are looking for funding
+  run `npm fund` for details
+
+12 vulnerabilities (6 moderate, 6 high)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] bat
+
+C:\Users\raman\.jenkins\workspace\Assignment 4>npm run build 
+
+> hello-world@0.1.0 build
+> react-scripts build
+
+Creating an optimized production build...
+Compiled successfully.
+
+File sizes after gzip:
+
+  58.82 kB  build\static\js\main.e61baa66.js
+  1.77 kB   build\static\js\453.20952338.chunk.js
+  513 B     build\static\css\main.f855e6bc.css
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s build
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+[Pipeline] bat
+
+C:\Users\raman\.jenkins\workspace\Assignment 4>xcopy build C:\deployment-directory /E /I /H /Y 
+build\asset-manifest.json
+build\favicon.ico
+build\index.html
+build\logo192.png
+build\logo512.png
+build\manifest.json
+build\robots.txt
+build\static\css\main.f855e6bc.css
+build\static\css\main.f855e6bc.css.map
+build\static\js\453.20952338.chunk.js
+build\static\js\453.20952338.chunk.js.map
+build\static\js\main.e61baa66.js
+build\static\js\main.e61baa66.js.LICENSE.txt
+build\static\js\main.e61baa66.js.map
+14 File(s) copied
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

@@ -1,0 +1,13 @@
+Started by user Ramanachandran R S
+Running as SYSTEM
+Building in workspace C:\Users\raman\.jenkins\workspace\Assignment 1
+No emails were triggered.
+[Assignment 1] $ cmd /c call C:\Users\raman\AppData\Local\Temp\jenkins15067191582061648748.bat
+
+C:\Users\raman\.jenkins\workspace\Assignment 1>xcopy C:\source-directory C:\target-directory /E /I /H /Y 
+C:\source-directory\Module-6 Jenkins Exercises.pdf
+1 File(s) copied
+
+C:\Users\raman\.jenkins\workspace\Assignment 1>exit 0 
+No emails were triggered.
+Finished: SUCCESS

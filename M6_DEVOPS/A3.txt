@@ -1,0 +1,42 @@
+Started by user Ramanachandran R S
+Running as SYSTEM
+Building in workspace C:\Users\raman\.jenkins\workspace\Assignment 3
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/ramanarsr/Pytest.git
+ > git.exe init C:\Users\raman\.jenkins\workspace\Assignment 3 # timeout=10
+Fetching upstream changes from https://github.com/ramanarsr/Pytest.git
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.46.2.windows.1'
+ > git.exe fetch --tags --force --progress -- https://github.com/ramanarsr/Pytest.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe config remote.origin.url https://github.com/ramanarsr/Pytest.git # timeout=10
+ > git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
+Checking out Revision f38ed4794a18ebdfb202559fa680d66f66ff146b (refs/remotes/origin/main)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f f38ed4794a18ebdfb202559fa680d66f66ff146b # timeout=10
+Commit message: "main commit"
+First time build. Skipping changelog.
+[Assignment 3] $ cmd /c call C:\Users\raman\AppData\Local\Temp\jenkins14680808019067943314.bat
+
+C:\Users\raman\.jenkins\workspace\Assignment 3>python -m venv venv 
+
+C:\Users\raman\.jenkins\workspace\Assignment 3>.\venv\Scripts\activate
+[Assignment 3] $ cmd /c call C:\Users\raman\AppData\Local\Temp\jenkins16204333192743653526.bat
+
+C:\Users\raman\.jenkins\workspace\Assignment 3>flask run 
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+127.0.0.1 - - [20/Feb/2025 14:39:53] "GET / HTTP/1.1" 200 -
+Terminate batch job (Y/N)? 
+
+C:\Users\raman\.jenkins\workspace\Assignment 3>exit 0 
+Build was aborted
+Aborted by Ramanachandran R S
+Finished: ABORTED
